@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek风格聊天界面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- 左侧边栏 -->
+        <div class="sidebar">
+            <div class="logo-area">
+                <div class="logo">DS</div>
+                <div class="logo-text">DeepSeek Chat</div>
+            </div>
+            
+            <button class="new-chat-btn" id="newChatBtn">
+                <i class="fas fa-plus"></i>
+                新对话
+            </button>
+            
+            <div class="history-title">最近对话</div>
+            <div class="history-list" id="historyList">
+                <!-- 历史对话项将通过JS动态生成 -->
+            </div>
+        </div>
+        
+        <!-- 右侧聊天区域 -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="model-info">DeepSeek-V3 · 128K上下文 · 免费使用</div>
+            </div>
+            
+            <div class="messages" id="messages">
+                <!-- 消息将通过JS动态生成 -->
+            </div>
+            
+            <div class="input-area">
+                <div class="input-container">
+                    <textarea class="text-input" id="messageInput" placeholder="输入你的消息..." rows="1"></textarea>
+                    <button class="send-btn" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-actions">
+                    <button class="action-btn" id="regenerateBtn">
+                        <i class="fas fa-sync-alt"></i>
+                        重新生成
+                    </button>
+                    <button class="action-btn" id="copyBtn">
+                        <i class="fas fa-copy"></i>
+                        复制对话
+                    </button>
+                    <button class="action-btn" id="clearBtn">
+                        <i class="fas fa-trash-alt"></i>
+                        清除对话
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
